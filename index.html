@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hermes Desktop</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <img src="nous-girl.png" class="logo" alt="Hermes">
+    <h1>Hermes Desktop</h1>
+  </header>
+  <div id="chat" class="chat"></div>
+  <div id="media" class="media" style="display:none">
+    <img id="mediaImg" style="display:none">
+    <video id="mediaVid" controls style="display:none"></video>
+    <button id="closeMedia">Close</button>
+  </div>
+  <div class="inputbar">
+    <input id="input" type="text" placeholder="Type or press mic...">
+    <button id="micBtn">🎤 Mic</button>
+    <button id="sendBtn">Send</button>
+  </div>
+  <div class="config">
+    <label>Bridge URL: <input id="base" value="http://192.168.0.77:8765/v1"></label>
+    <label>Key: <input id="key" value="hermes-tv"></label>
+  </div>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>

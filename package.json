@@ -1,0 +1,27 @@
+{
+  "name": "hermes-desktop",
+  "version": "1.0.0",
+  "author": { "name": "Kevin Brennan", "email": "kbrennan1961@gmail.com" },
+  "homepage": "https://github.com/kbrennan1961-png/hermes-desktop-app",
+  "description": "Hermes desktop chat: voice, image/video gen",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win",
+    "build:all": "electron-builder -mwl"
+  },
+  "build": {
+    "appId": "com.hermes.desktop",
+    "productName": "Hermes Desktop",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload.js", "index.html", "renderer.js", "styles.css", "nous-girl.png"],
+    "linux": { "target": ["AppImage"], "category": "Utility", "maintainer": "Kevin Brennan <kbrennan1961@gmail.com>" },
+    "win": { "target": ["nsis"] },
+    "mac": { "target": ["dmg"] }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
